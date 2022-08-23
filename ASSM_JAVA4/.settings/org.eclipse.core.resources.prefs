@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/com/assm/dao/MovieDAO.java=UTF-8
+encoding//src/com/assm/dao/UserDAO.java=UTF-8
+encoding//src/com/assm/servlet/AccountServlet.java=UTF-8
+encoding//src/com/assm/servlet/Main.java=UTF-8
+encoding//src/com/assm/servlet/ManagerMovieSevlet.java=UTF-8
+encoding//src/com/assm/utils/JpaUtils.java=UTF-8

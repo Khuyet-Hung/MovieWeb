@@ -1,0 +1,192 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="../../css/account/Login.css">
+    </head>
+</head>
+
+<body>
+    <!--
+<nav id="sidebar-wrapper">
+		<div class="wap">
+			<div class="myrow">
+				<div class="logo col-1">
+					<a href=""> <img src="../../img/Web/Logo.jpg" alt="">
+					</a>
+				</div>
+
+				<div class="listmenu-item col-6">
+					<div class="movies hover_text">
+						<a href="#"> <span>Movies</span>
+							<div class="listfilm-item">
+								<ul class="sidebar-nav">
+									<li class="sidebar-nav-item"><a
+										class="js-scroll-trigger item" href="#UpcomingMovies">Coming
+											Next</a></li>
+									<li class="sidebar-nav-item"><a
+										class="js-scroll-trigger item" href="#TopRatedMovies">Top
+											Movies</a></li>
+									<li class="sidebar-nav-item"><a
+										class="js-scroll-trigger item" href="#LatestMovies">Latest
+											Movies</a></li>
+									<li class="sidebar-nav-item"><a
+										class="js-scroll-trigger item" href="#EnglishMovies">English
+											Movies</a></li>
+								</ul>
+							</div>
+						</a>
+					</div>
+					<div class="comic hover_text">
+						<a href=""> <span>Comic</span>
+						</a>
+					</div>
+					<div class="characters hover_text">
+						<a href=""> <span>Characters</span>
+						</a>
+					</div>
+					<div class="games hover_text">
+						<a href=""> <span>Games</span>
+						</a>
+					</div>
+					<div class="new hover_text">
+						<a href=""> <span>New</span>
+						</a>
+					</div>
+					<div class="more hover_text">
+						<a href=""> <span>More</span>
+						</a>
+					</div>
+				</div>
+
+
+				<div class="search col-3">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Seach">
+					</div>
+					<i class="fa fa-search"></i>
+				</div>
+
+				<div class="avata col-1">
+					<c:choose>
+						<c:when test="${empty user}">
+							<div class="avatar"
+								style="background-image: url(../../img/Avatar/default.jpg); background-repeat: no-repeat; background-size: cover;">
+						</c:when>
+						<c:when test="${not empty user}">
+							<div class="avatar"
+								style="background-image: url(../../img/Avatar/avatar_1.jpg); 
+					background-repeat: no-repeat; background-size: cover;">
+						</c:when>
+					</c:choose>
+
+					<div class="acc_list">
+						<ul>
+							<a href="../../Main/account/sign-in">
+								<li>Sign In</li>
+							</a>
+							<a href="">
+								<li>Sign Up</li>
+							</a>
+							<a href="">
+								<li>Log out</li>
+							</a>
+							<c:if test="${user.role}">
+								<a href="../../Main/manager">
+								<li>Manager</li>
+							</a>
+							</c:if>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</nav>
+	-->
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="../../AccountServlet/Sign-up" method="post">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook"
+						aria-hidden="true"></i></a> <a href="#" class="social"><i
+						class="fa fa-google" aria-hidden="true"></i></a> <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="UserID" name="userId" />
+                <input type="text" placeholder="Full Name" name="userName" />
+                <input type="email" placeholder="Email" name="email" />
+                <input type="password" placeholder="Password" name="password" />
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="../../AccountServlet/Sign-in" method="post">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook"
+						aria-hidden="true"></i></a> <a href="#" class="social"><i
+						class="fa fa-google" aria-hidden="true"></i></a> <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <span>or use your account</span> <input type="text" placeholder="User ID" name="UserID" value="Hung123" /> <input type="password" placeholder="Password" name="Password" value="123" />
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info
+                    </p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+	<footer id="footer">
+		<i class="social-icon fa fa-facebook"></i> <i
+			class="social-icon fa fa-twitter"></i> <i
+			class="social-icon fa fa-instagram"></i> <i
+			class="social-icon fa fa-envelope"></i> <i
+			class="social-icon fa fa-pinterest"></i> <i
+			class="social-icon fa fa-youtube"></i>
+		<p>© Copyright 2022 Marvel</p>
+	</footer>
+	-->
+
+</body>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
+</html>
